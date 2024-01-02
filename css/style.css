@@ -1,0 +1,137 @@
+/*? ══════════════════▶ Start Project ◀═══════════════════════  */
+/*? ══════════════════▶ Start General Styles ◀═══════════════════════  */
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+/* .container-fluid{
+  background-color: #f4f4f4;
+  background-color: #141d26;
+} */
+
+w-fit{
+  width: fit-content;
+}
+
+.w-nav{
+  width: 70%;
+}
+
+h1{
+  font-size: 28px;
+  font-weight: 700;
+  color: #0d0c22;
+  /* color: #785FEE;  */
+  /* text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
+  font-style: italic; */
+
+}
+
+.signup-content h1{
+  color: #E1753D;
+}
+
+label{
+  font-size: 15px;
+}
+
+a{
+  color: #0d0c22;
+}
+
+a:hover{
+  cursor: pointer;
+}
+
+.fa-google {
+  background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+/*? ══════════════════════════════════════════════════════════════════▶ */
+.form-control{
+  border-radius: 12px;
+}
+
+input::placeholder{
+  font-size: 14px;
+} 
+
+.btn-login{
+  width: 100%;
+  border-radius: 30px;
+  --bs-btn-padding-x: 0.75rem;
+  --bs-btn-padding-y: 1rem;
+  --bs-btn-font-size: .875rem;
+  --bs-btn-color: #fff;  
+  --bs-btn-bg: #0d0c22;
+  --bs-btn-border-color: #0d0c22;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #3a3946;
+  --bs-btn-hover-border-color: #3a3946;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #565564;
+  --bs-btn-active-border-color: #565564;
+}
+.btn-signup{
+  width: 100%;
+  border-radius: 30px;
+  --bs-btn-padding-x: 0.75rem;
+  --bs-btn-padding-y: 1rem;
+  --bs-btn-font-size: .875rem;
+  --bs-btn-color: #fff; 
+  --bs-btn-bg: #E1753D;
+  --bs-btn-border-color: #E1753D;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: rgb(247, 131, 73);
+  --bs-btn-hover-border-color: #faaa6c;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #faaa6c;
+  --bs-btn-active-border-color: #faaa6c;
+  
+}
+
+.create-one{
+  font-size: 14px;
+  text-align: center;
+  color: #5f5e6b;
+}
+
+
+/*? ══════════════════════════ Welcome Page ════════════════════════════════════════▶ */
+.w-custom{
+  width: 350px;
+}
+
+.navbar{
+  background-color: #045; 
+}
+
+#welcomePage{
+  background-color: #f4f4f4;
+}
+
+.welcome-text h1{
+  color:#045;
+  font-size: calc(1.325rem + 0.9vw);
+}
+
+.img-item{
+  width: 65%;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--? STYLE-->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaQuery.css">
+    <link rel="icon" href="img/icon.png">
+
+    <!--? FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    
+
+    <!--? TITLE  -->
+    <title>Project</title>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#navbar">
+
+
+    <!-- ══════════════════▶ Start Project ◀═══════════════════════ -->
+    <div class="container-fluid position-relative">
+      <div class="row min-vh-100 justify-content-center align-items-center">
+        
+        <!--* ═══════════▶  Image in login & signup ◀════════════ -->
+        <div id="imageItem" class="photo col-md-5 pb-5 d-lg-flex flex-lg-column d-none">
+          <div class="img-container">
+            <img src="img/b3.png" class="w-100">
+          </div>
+        </div>
+
+        <!--* ════════════▶  Content in login & signup ◀══════════════ -->
+        <div class="col-md-8 col-lg-4 ">
+          <div class="content">
+
+            <div id="parent" class="px-3 px-lg-4 w-100 d-flex flex-column gap-4">
+                
+              <!--? ══════▶ SIGNUP content ◀═══════ -->
+              <div id="signUpContent" class="signup-content d-flex flex-column gap-4 d-none">
+                <h1 class="mb-3">Sign up</h1>  
+
+                <!--& ═════════▶ Input-1 ◀════════ -->
+                <div>
+                  <input id="nameInput" class="form-control w-100" oninput="validName()" placeholder="Enter your name" type="text">
+                  <p id="nameAlert" class="d-none ms-2 mt-2 mb-0 text-danger">
+                    * At least 3 characters.
+                  </p>
+                </div>
+                
+                <!--& ═════════▶ Input-2 ◀════════ -->
+                <div>
+                  <input id="emailForInput" class="form-control w-100" oninput="validEmail()" placeholder="Enter your email" type="text">
+                  <p id="EmailAlert" class="d-none ms-2 mt-2 mb-0 text-danger">
+                    * Must be like this: "email@website.com".
+                  </p>
+                </div>
+
+                <!--& ═════════▶ Input-3 ◀════════ -->
+                <div>
+                  <input id="passForInput" class="form-control w-100" oninput="validPass()" placeholder="Enter your password" type="text">
+                  <p id="PassAlert" class="d-none ms-2 mt-2 mb-0 text-danger">
+                    * At least 4 characters.
+                  </p>
+                </div>
+              </div>
+
+              <!--? ══════▶ LOGIN content ◀═══════ -->
+              <div id="loginContent" class="d-flex flex-column gap-4">
+
+                <h1 class="mb-3">Login into Website</h1>
+
+                <div>
+                  <label class="d-flex justify-content-between fw-semibold mb-1" for="emailInput">
+                    Email
+                  </label>
+                  <!--* ═════════▶ Input-Email ◀═════════ -->
+                  <input id="emailInput" oninput="validEmail()" class="form-control w-100" placeholder="" type="text">
+                  <!-- <p id="emailAlert" class="d-none ms-2 mt-2 mb-0 text-danger">
+                     Please make sure it looks like this: email@website.com.
+                  </p> -->
+                </div>              
+                
+                <div>
+                  <label class="d-flex justify-content-between fw-semibold mb-1" for="passInput">
+                    Password
+                    <a href="" class="fw-light">Forgot?</a>
+                  </label>
+                  <!--* ═════════▶ Input-Pass ◀══════════ -->
+                  <input id="passInput" oninput="validPass()" class="form-control w-100" placeholder="" type="password">
+                  <!-- <p id="passAlert" class="d-none ms-2 mt-1 mb-0 text-danger">
+                     at least 5 characters.
+                  </p> -->
+                </div>
+              </div>
+             
+              <!--^ ══════▶ SignUp Button ◀═════ -->
+              <button id="btnSign" onclick="addUser()" class="btn btn-signup d-none mt-2 mb-0 fw-semibold">Sign up</button>
+
+              <!--^ ══════▶ LOGIN Button ◀═════ -->
+              <button id="btnLogin" onclick="login()" class="btn btn-login mt-2 mb-0 fw-semibold">Login</button>
+             
+              <span id="createOne" onclick="createAccount()" class="create-one mt-0">
+                Don't have an account?
+                <a class="text-decoration-underline">Create one!</a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--* ════════════▶ Welcome Page ◀══════════════ -->
+        <div id="welcomePage" class="container min-vh-100 d-none">
+          <div class="row vh-100 justify-content-center align-items-center">
+            <div class="col-md-9 col-lg-6">
+
+              <!--!================ Navbar =============> -->
+              <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+                <div class="container-fluid w-md-80">
+                  <a class="navbar-brand fw-semibold " href="#">PROJECT</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">  
+                    <button onclick="logout()" class="btn btn-outline-warning w-btn mt-3 mt-lg-0" type="submit">Logout</button>
+                  </div>
+                </div>
+              </nav>
+
+              <!--!================ Home ============> -->
+              <div class="Home-content d-flex flex-column justify-content-center align-items-center">
+                <!--? Text -->
+                <div id="textLogin" class=" welcome-text w-100 text-center py-4 mb-3 mb-md-4 rounded-4 d-flex justify-content-center">
+                  <!-- <h1 class=" fw-semibold w-custom">Welcome to our website, Omar!</h1> -->
+                </div>
+
+                <!--? Image -->
+                <div class="img-item">
+                  <img src="img/study-literature (1).png" class="w-100" alt="">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--? Bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!--? JavaScript -->
+    <script src="js/script.js"></script>
+    <!--? SweetAlert -->
+    <script src="js/sweetalert2@11.js"></script>
+
+  </body>
+</html>
+
+
+
+
