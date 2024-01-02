@@ -201,8 +201,8 @@ function isExist(){
 }
 
 function clearLoginForm(){
-  emailInput.value="";
-  passInput.value="";
+  loginEmailInput.value="";
+  loginPassInput.value="";
 }
 //*? ═════════════════════════▶  Login process ◀══════════════════════════════
 
