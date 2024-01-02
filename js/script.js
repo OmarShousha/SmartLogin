@@ -30,6 +30,15 @@ function showLogin(){
   createOne.classList.remove("d-none");
 }
 
+function backToLogin(){
+  signUpContent.classList.add("d-none");//hide signup
+  loginContent.classList.remove("d-none");//show login
+
+  btnSign.classList.add("d-none");//hide signup btn
+  btnLogin.classList.remove("d-none");
+  createOne.classList.remove("d-none");
+}
+
 function getWelcomePage(){
   welcomePage.classList.remove("d-none");
   loginContent.classList.add("d-none");
